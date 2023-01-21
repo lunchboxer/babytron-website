@@ -1,11 +1,8 @@
-import adapter from '@sveltejs/adapter-static'
+import adapter from '@sveltejs/adapter-netlify'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    prerender: {
-      entries: ['*', '/users/[id]', '/users/edit/[id]'],
-    },
     adapter: adapter(),
     alias: {
       $graphql: './src/lib/graphql',
